@@ -6,9 +6,18 @@
   --body-font-family: 'Open Sans', sans-serif;
 
   --section-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.1);
+  --card-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
 
   --content-inline-margin: 1.5rem;
   --content-padding-block: 2rem;
+
+  --btn-primary-background: #e85810;
+  --btn-primary-txt-clr: #fff;
+  --btn-primary-border-clr: #e85810;
+
+  --btn-secondary-background: transparent;
+  --btn-secondary-txt-clr: #000;
+  --btn-secondary-border-clr: #000;
 }
 
 * {
@@ -29,6 +38,7 @@
 
   p {
     font-family: var(--body-font-family);
+    line-height: 1.5;
   }
 
   button:hover {
@@ -38,13 +48,26 @@
 
 .btn-primary,
 .btn-secondary {
-  padding-inline: 2em;
-  padding-block: 1rem;
+  padding-inline: 1.8em;
+  padding-block: 0.75em;
 
   border-radius: 0.5rem;
   border: 0;
 
-  font-size: 1.25rem;
+  font-size: 1.125rem;
+}
+
+.btn-primary {
+  background-color: var(--btn-primary-background);
+  border: 1px solid var(--btn-primary-border-clr);
+  color: var(--btn-primary-txt-clr);
+  text-transform: uppercase;
+}
+
+.btn-secondary {
+  background-color: var(--btn-secondary-background);
+  color: var(--btn-secondary-txt-clr);
+  border: 1px solid var(--btn-secondary-border-clr);
 }
 
 .header {
@@ -54,13 +77,21 @@
   justify-content: space-between;
   gap: 1.5rem;
 
-  padding-block: 2rem;
+  padding-block: var(--content-padding-block);
 
   box-shadow: var(--section-shadow);
+
+  > * {
+    margin-inline: var(--content-inline-margin);
+  }
 
   .logo {
     width: 100%;
     max-width: 150px;
+  }
+
+  @media screen and (width > 740px) {
+    flex-direction: row;
   }
 }
 
@@ -81,6 +112,10 @@
   flex-direction: column;
   align-items: center;
   gap: 2rem;
+
+  p {
+    max-width: 100ch;
+  }
 }
 
 .incentiveSection {
@@ -125,6 +160,10 @@
     @media screen and (width > 740px) {
       grid-template-areas: 'heading image image' 'textContent image image' 'button image image';
       align-items: start;
+
+      p {
+        padding-right: 1.5rem;
+      }
 
       .imgContainer {
         img {
@@ -198,10 +237,10 @@
   flex-direction: column;
   gap: 2rem;
   align-items: center;
-  margin-inline: var(--content-inline-margin);
+  box-shadow: var(--section-shadow);
 
   > article {
-    width: 100%;
+    margin-inline: var(--content-inline-margin);
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -209,21 +248,71 @@
 
     .input-group {
       position: relative;
-      border: 1px solid black;
-      padding-inline: 0.6rem;
-      padding-block: 0.2rem;
+      min-width: 14.5rem;
+      border: 1px solid #a1a1a1;
+      padding-inline: 0.7rem;
+      padding-block: 0.4rem;
       border-radius: 0.25rem;
+
+      &:focus-within {
+        outline: 1px solid #6f6f6f;
+      }
 
       input {
         border: 0;
         width: 100%;
+        height: 100%;
+
+        &:focus-visible {
+          outline: 0;
+        }
       }
 
       &::after {
         position: absolute;
         content: '\1F50D';
         right: 0.6rem;
+        color: #a1a1a1;
+        opacity: 0.5;
+      }
+    }
+
+    .fundraisersDisplay {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2.5rem;
+
+      .fundraiserCard {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        border-radius: 16px;
+        padding: 1.5rem;
+        width: 400px;
+
+        box-shadow: var(--card-shadow);
+
+        .fundraiserImage {
+          object-fit: cover;
+          width: 100%;
+        }
+      }
+    }
+
+    @media screen and (width > 740px) {
+      .input-group {
+        align-self: start;
       }
     }
   }
+}
+
+.faqSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
 }
