@@ -4,6 +4,11 @@
 :root {
   --heading-font-family: Alata, sans-serif;
   --body-font-family: 'Open Sans', sans-serif;
+
+  --section-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.1);
+
+  --content-inline-margin: 2rem;
+  --content-padding-block: 2rem;
 }
 
 * {
@@ -25,4 +30,104 @@
   p {
     font-family: var(--body-font-family);
   }
+
+  button:hover {
+    cursor: pointer;
+  }
+}
+
+.btn-primary,
+.btn-secondary {
+  padding-inline: 2em;
+  padding-block: 1rem;
+
+  border-radius: 0.5rem;
+  border: 0;
+
+  font-size: 1.25rem;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+
+  padding-block: 2rem;
+
+  box-shadow: var(--section-shadow);
+
+  .logo {
+    width: 100%;
+    max-width: 150px;
+  }
+}
+
+.pageContent {
+  padding-block: var(--content-padding-block);
+
+  > * {
+    margin-inline: var(--content-inline-margin);
+  }
+}
+
+.divider {
+  align-self: normal;
+}
+
+.introSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.incentiveSection {
+  display: grid;
+  grid-template-areas: 'heading heading' 'textContent textContent' 'button button' 'image image';
+
+  row-gap: 2.5rem;
+  place-items: center;
+
+  padding-bottom: 0;
+
+  h2 {
+    grid-area: heading;
+  }
+
+  p {
+    grid-area: textContent;
+    max-width: 80ch;
+  }
+
+  button {
+    grid-area: button;
+  }
+
+  .imgContainer {
+    grid-area: image;
+
+    img {
+      object-fit: cover;
+      max-width: 600px;
+    }
+  }
+
+  @media screen and (width > 740px) {
+    grid-template-areas: 'heading image image' 'textContent image image' 'button image image';
+    align-items: start;
+
+    .imgContainer {
+      img {
+        max-width: 400px;
+      }
+    }
+  }
+}
+
+.instructionsSection {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
 }

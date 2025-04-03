@@ -6,42 +6,43 @@
     <title>P2P Landing Page Template</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
+  <body class="campaign-flow">
     <header class="header">
       <!-- logo -->
-      <p>logo</p>
+      <div class="logo-container">
+        <img src="./assets/logoipsum-277.svg" alt="logo" class="logo" />
+      </div>
+
       <!-- button -->
-      <button>Starta insamling</button>
+      <button class="btn-primary cc-button">Starta insamling</button>
     </header>
     <main>
-      <section class="pageContent">
+      <section class="pageContent introSection" id="introSection">
         <!-- heading -->
-        <h1>Heading 1</h1>
+        <h1 class="page-title cc-title" id="page-title">Heading 1</h1>
         <!-- intro text -->
-        <p>
+        <p class="cc-txt">
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis culpa
           optio ducimus et ipsam suscipit nulla, atque, temporibus officia harum
           dolorem non! Ipsa nemo, omnis id quod eaque inventore ex? Quia dicta
           porro consequatur dolorem, praesentium similique repellat sint, beatae
           nostrum et amet ipsa debitis culpa molestiae illo cum nesciunt, dolore
           odio? Asperiores recusandae ullam architecto. Cum inventore in odio.
-          Ex, ullam amet beatae cum, accusamus culpa maxime illum eligendi
-          molestiae, voluptate sequi? Maxime est, voluptates praesentium
-          expedita corporis dolor libero fugit natus sed perspiciatis accusamus
-          rerum placeat animi ab.
         </p>
         <!-- campaigns -->
-        <article>
+        <article class="campaignsDisplay">
           <div>campaign</div>
           <div>campaign</div>
           <div>campaign</div>
         </article>
       </section>
-      <section class="pageContent">
+      <section class="pageContent incentiveSection" id="incentiveSection">
+        <hr class="divider" />
         <!-- heading -->
-        <h2>Heading 2</h2>
+
+        <h2 class="cc-title">Heading 2</h2>
         <!-- text -->
-        <p>
+        <p class="cc-txt">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi hic,
           deleniti numquam magni earum repellat rerum pariatur fugit obcaecati
           asperiores dignissimos qui deserunt molestias ducimus. Provident nemo
@@ -51,30 +52,35 @@
           perferendis voluptate. Itaque!
         </p>
         <!-- button -->
-        <button>Start insamling</button>
+        <button class="btn-secondary cc-button">Starta insamling</button>
         <!-- image -->
-        <div>image</div>
+        <div class="imgContainer">
+          <img
+            src="./assets/gagandeep-singh-h76yDIAoZoQ-unsplash.jpg"
+            alt="incentive image"
+          />
+        </div>
       </section>
-      <section class="pageContent">
+      <section class="pageContent instructionsSection" id="instructionsSection">
         <!-- heading -->
-        <h2>Heading 2</h2>
+        <h2 class="cc-title">Heading 2</h2>
         <!-- instructions -->
-        <article>
+        <article class="instructionsDisplay">
           <div>Steg 1.</div>
           <div>Steg 2.</div>
           <div>Steg 3.</div>
         </article>
       </section>
-      <section class="pageContent">
+      <section class="pageContent fundraisersSection" id="fundraisersSection">
         <!-- heading -->
-        <h2>Heading 2</h2>
+        <h2 class="cc-title">Heading 2</h2>
         <!-- fundraisers display -->
         <article>
-          <div>
+          <div class="input-group">
             <input type="text" id="searchInput" />
             <span>Search</span>
           </div>
-          <div>
+          <div class="fundraisersDisplay">
             <div>Fundraiser Card</div>
             <div>Fundraiser Card</div>
             <div>Fundraiser Card</div>
@@ -83,11 +89,11 @@
           </div>
         </article>
       </section>
-      <section class="pageContent">
+      <section class="pageContent faqSection" id="faqSection">
         <!-- heading -->
-        <h2>Heading 2</h2>
+        <h2 class="cc-title">Heading 2</h2>
         <!-- faq text -->
-        <p>
+        <p class="cc-txt">
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore,
           iusto architecto. Dolores magnam sint impedit aliquid pariatur nam
           error aliquam minima! Dicta aliquid tenetur explicabo ipsam rerum
@@ -97,11 +103,23 @@
           dolores a non perspiciatis odit? Culpa.
         </p>
         <!-- button -->
-        <button>Till FAQ</button>
+        <button class="btn-secondary cc-button">Till FAQ</button>
       </section>
     </main>
     <footer class="footer">
       <!-- footer content -->
+      <div>
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+      </div>
+      <div class="socialIcons">
+        <a href="#">Instagram</a><a href="#">Facebook</a><a href="#">X</a
+        ><a href="#">Linkedin</a>
+      </div>
+      <div class="watermark">
+        <span>Powered by</span>
+        <div class="adoveoLogo">Adoveo</div>
+      </div>
     </footer>
   </body>
 </html>
