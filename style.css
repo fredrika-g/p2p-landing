@@ -299,6 +299,16 @@
           object-fit: cover;
           width: 100%;
         }
+
+        .collectedDisplay {
+          align-self: start;
+          font-size: 0.9rem;
+
+          .amount {
+            font-size: 1.5rem;
+            font-weight: bold;
+          }
+        }
       }
     }
 
