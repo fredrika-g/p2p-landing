@@ -7,7 +7,7 @@
 
   --section-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.1);
 
-  --content-inline-margin: 2rem;
+  --content-inline-margin: 1.5rem;
   --content-padding-block: 2rem;
 }
 
@@ -84,43 +84,52 @@
 }
 
 .incentiveSection {
-  display: grid;
-  grid-template-areas: 'heading heading' 'textContent textContent' 'button button' 'image image';
+  display: flex;
+  flex-direction: column;
+  gap: var(--content-padding-block);
+  padding-top: 0;
 
-  row-gap: 2.5rem;
-  place-items: center;
+  > div {
+    display: grid;
+    grid-template-areas: 'heading heading' 'textContent textContent' 'button button' 'image image';
 
-  padding-bottom: 0;
+    row-gap: 2.5rem;
+    place-items: center;
 
-  h2 {
-    grid-area: heading;
-  }
+    padding-bottom: 0;
 
-  p {
-    grid-area: textContent;
-    max-width: 80ch;
-  }
-
-  button {
-    grid-area: button;
-  }
-
-  .imgContainer {
-    grid-area: image;
-
-    img {
-      object-fit: cover;
-      max-width: 600px;
+    h2 {
+      grid-area: heading;
     }
-  }
 
-  @media screen and (width > 740px) {
-    grid-template-areas: 'heading image image' 'textContent image image' 'button image image';
-    align-items: start;
+    p {
+      grid-area: textContent;
+      min-width: 25ch;
+      max-width: 80ch;
+    }
+
+    button {
+      grid-area: button;
+    }
 
     .imgContainer {
+      grid-area: image;
+
       img {
-        max-width: 400px;
+        object-fit: cover;
+        width: 100%;
+        max-width: 600px;
+      }
+    }
+
+    @media screen and (width > 740px) {
+      grid-template-areas: 'heading image image' 'textContent image image' 'button image image';
+      align-items: start;
+
+      .imgContainer {
+        img {
+          max-width: 400px;
+        }
       }
     }
   }
@@ -129,5 +138,92 @@
 .instructionsSection {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 3rem;
+
+  .instructionsDisplay {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+
+    > div {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 1rem;
+
+      .stepNumber {
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-size: 1.5rem;
+        font-weight: bold;
+        font-weight: 600;
+      }
+
+      .imageWrapper {
+        aspect-ratio: 1;
+        border-radius: 100%;
+        border: 5px solid orange;
+        padding: 1.5rem;
+        img {
+          max-width: 125px;
+        }
+      }
+
+      .instructions {
+        font-size: 1.25rem;
+        font-weight: bold;
+        font-weight: 600;
+      }
+    }
+  }
+
+  @media screen and (width > 740px) {
+    h2 {
+      align-self: start;
+    }
+
+    .instructionsDisplay {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+}
+
+.fundraisersSection {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  margin-inline: var(--content-inline-margin);
+
+  > article {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+
+    .input-group {
+      position: relative;
+      border: 1px solid black;
+      padding-inline: 0.6rem;
+      padding-block: 0.2rem;
+      border-radius: 0.25rem;
+
+      input {
+        border: 0;
+        width: 100%;
+      }
+
+      &::after {
+        position: absolute;
+        content: '\1F50D';
+        right: 0.6rem;
+      }
+    }
+  }
 }

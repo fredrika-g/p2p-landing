@@ -40,25 +40,27 @@
         <hr class="divider" />
         <!-- heading -->
 
-        <h2 class="cc-title">Heading 2</h2>
-        <!-- text -->
-        <p class="cc-txt">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi hic,
-          deleniti numquam magni earum repellat rerum pariatur fugit obcaecati
-          asperiores dignissimos qui deserunt molestias ducimus. Provident nemo
-          dolor molestias id! Aut incidunt quos atque nisi quam quidem iste
-          eaque id eum beatae magnam, omnis doloremque fuga in similique
-          deserunt esse accusamus ut nesciunt aliquam, autem voluptates illo
-          perferendis voluptate. Itaque!
-        </p>
-        <!-- button -->
-        <button class="btn-secondary cc-button">Starta insamling</button>
-        <!-- image -->
-        <div class="imgContainer">
-          <img
-            src="./assets/gagandeep-singh-h76yDIAoZoQ-unsplash.jpg"
-            alt="incentive image"
-          />
+        <div>
+          <h2 class="cc-title">Heading 2</h2>
+          <!-- text -->
+          <p class="cc-txt">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi hic,
+            deleniti numquam magni earum repellat rerum pariatur fugit obcaecati
+            asperiores dignissimos qui deserunt molestias ducimus. Provident
+            nemo dolor molestias id! Aut incidunt quos atque nisi quam quidem
+            iste eaque id eum beatae magnam, omnis doloremque fuga in similique
+            deserunt esse accusamus ut nesciunt aliquam, autem voluptates illo
+            perferendis voluptate. Itaque!
+          </p>
+          <!-- button -->
+          <button class="btn-secondary cc-button">Starta insamling</button>
+          <!-- image -->
+          <div class="imgContainer">
+            <img
+              src="./assets/gagandeep-singh-h76yDIAoZoQ-unsplash.jpg"
+              alt="incentive image"
+            />
+          </div>
         </div>
       </section>
       <section class="pageContent instructionsSection" id="instructionsSection">
@@ -66,10 +68,39 @@
         <h2 class="cc-title">Heading 2</h2>
         <!-- instructions -->
         <article class="instructionsDisplay">
-          <div>Steg 1.</div>
-          <div>Steg 2.</div>
-          <div>Steg 3.</div>
+          <div>
+            <span class="stepNumber">1.</span>
+
+            <div class="imageWrapper">
+              <img src="./assets/signs-svgrepo-com.svg" alt="step image" />
+            </div>
+            <p class="instructions cc-text">Välj ändamål...</p>
+          </div>
+          <div>
+            <span class="stepNumber">2.</span>
+
+            <div class="imageWrapper">
+              <img
+                src="./assets/charity-app-svgrepo-com.svg"
+                alt="step image"
+              />
+            </div>
+            <p class="instructions cc-text">Skapa insamling...</p>
+          </div>
+          <div>
+            <span class="stepNumber">3.</span>
+
+            <div class="imageWrapper">
+              <img
+                src="./assets/personal-connections-3-svgrepo-com.svg"
+                alt="step image"
+              />
+            </div>
+            <p class="instructions cc-text">Dela med dina vänner!</p>
+          </div>
         </article>
+
+        <button class="btn-primary cc-button">Kom igång</button>
       </section>
       <section class="pageContent fundraisersSection" id="fundraisersSection">
         <!-- heading -->
@@ -78,7 +109,6 @@
         <article>
           <div class="input-group">
             <input type="text" id="searchInput" />
-            <span>Search</span>
           </div>
           <div class="fundraisersDisplay">
             <div>Fundraiser Card</div>
