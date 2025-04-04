@@ -18,6 +18,10 @@
   --btn-secondary-background: transparent;
   --btn-secondary-txt-clr: #000;
   --btn-secondary-border-clr: #000;
+
+  --btn-tertiary-background: transparent;
+  --btn-tertiary-txt-clr: #000;
+  --btn-tertiary-border-clr: #000;
 }
 
 * {
@@ -44,6 +48,10 @@
   button:hover {
     cursor: pointer;
   }
+
+  a {
+    text-decoration: none;
+  }
 }
 
 .btn-primary,
@@ -68,6 +76,20 @@
   background-color: var(--btn-secondary-background);
   color: var(--btn-secondary-txt-clr);
   border: 1px solid var(--btn-secondary-border-clr);
+}
+
+.btn-tertiary {
+  padding-inline: 1.5em;
+  padding-block: 0.5em;
+
+  border-radius: 0.5rem;
+  border: 0;
+
+  font-size: 1rem;
+
+  background-color: var(--btn-tertiary-background);
+  color: var(--btn-tertiary-txt-clr);
+  border: 1px solid var(--btn-tertiary-border-clr);
 }
 
 .header {
@@ -325,4 +347,66 @@
   flex-direction: column;
   align-items: center;
   gap: 2rem;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  padding-block: 1.5rem;
+  background-color: #000;
+
+  * {
+    color: #fff;
+  }
+
+  .linkGroup {
+    display: flex;
+    gap: 2rem;
+    font-family: var(--heading-font-family);
+    font-size: 1.25rem;
+  }
+
+  .linkGroup.socials {
+    gap: 1.5rem;
+
+    * {
+      font-size: 2rem;
+    }
+
+    .linkGroupItem {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      aspect-ratio: 1;
+      width: 50px;
+      border-radius: 100%;
+      background-color: #fff;
+      color: #000;
+
+      * {
+        color: #000;
+      }
+    }
+  }
+
+  .watermark {
+    display: flex;
+    align-items: center;
+    justify-content: baseline;
+    gap: 0.5rem;
+    font-size: 0.8rem;
+
+    span {
+      opacity: 0.75;
+    }
+
+    .adoveoLogo {
+      img {
+        width: 100%;
+        max-width: 120px;
+      }
+    }
+  }
 }
