@@ -21,7 +21,7 @@
       </div>
 
       <!-- button -->
-      <button class="btn-primary cc-button">{ STARTA INSAMLING }</button>
+      <button class="cc-button btn-primary">{ STARTA INSAMLING }</button>
     </header>
     <main>
       <section class="pageContent introSection" id="introSection">
@@ -44,17 +44,17 @@
               <img src="./assets/whale.jpg" alt="campaign image" />
             </div>
             <div class="wrapper">
-              <p class="campaignName">{ campaign name }</p>
-              <p class="description">
+              <p class="cc-title campaignName">{ campaign name }</p>
+              <p class="cc-txt description">
                 { Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis
                 nisi, quaerat placeat perferendis itaque, aspernatur quibusdam
                 est harum tenetur modi repudiandae. }
               </p>
               <div class="collectedDisplay">
                 <span class="cc-txt">{ Insamlat hittills }</span>
-                <span class="amount">{ 45 750 kr }</span>
+                <span class="cc-title amount">{ 45 750 kr }</span>
               </div>
-              <button class="btn-primary cc-button">
+              <button class="cc-button btn-primary">
                 { STARTA INSAMLING }
               </button>
             </div>
@@ -64,17 +64,17 @@
               <img src="./assets/whale.jpg" alt="campaign image" />
             </div>
             <div class="wrapper">
-              <p class="campaignName">{ campaign name }</p>
-              <p class="description">
+              <p class="cc-title campaignName">{ campaign name }</p>
+              <p class="cc-txt description">
                 { Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis
                 nisi, quaerat placeat perferendis itaque, aspernatur quibusdam
                 est harum tenetur modi repudiandae. }
               </p>
               <div class="collectedDisplay">
                 <span class="cc-txt">{ Insamlat hittills }</span>
-                <span class="amount">{ 45 750 kr }</span>
+                <span class="cc-title amount">{ 45 750 kr }</span>
               </div>
-              <button class="btn-primary cc-button">
+              <button class="cc-button btn-primary">
                 { STARTA INSAMLING }
               </button>
             </div>
@@ -84,17 +84,17 @@
               <img src="./assets/whale.jpg" alt="campaign image" />
             </div>
             <div class="wrapper">
-              <p class="campaignName">{ campaign name }</p>
-              <p class="description">
+              <p class="cc-title campaignName">{ campaign name }</p>
+              <p class="cc-txt description">
                 { Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis
                 nisi, quaerat placeat perferendis itaque, aspernatur quibusdam
                 est harum tenetur modi repudiandae. }
               </p>
               <div class="collectedDisplay">
                 <span class="cc-txt">{ Insamlat hittills }</span>
-                <span class="amount">{ 45 750 kr }</span>
+                <span class="cc-title amount">{ 45 750 kr }</span>
               </div>
-              <button class="btn-primary cc-button">
+              <button class="cc-button btn-primary">
                 { STARTA INSAMLING }
               </button>
             </div>
@@ -118,7 +118,7 @@
             voluptates illo perferendis voluptate. Itaque! }
           </p>
           <!-- button -->
-          <button class="btn-secondary cc-button">{ Starta insamling }</button>
+          <button class="cc-button btn-secondary">{ Starta insamling }</button>
           <!-- image -->
           <div class="imgContainer">
             <img src="./assets/rain-forest.jpg" alt="incentive image" />
@@ -131,32 +131,32 @@
         <!-- instructions -->
         <article class="instructionsDisplay">
           <div>
-            <span class="stepNumber">1.</span>
+            <span class="cc-title stepNumber">1.</span>
 
             <div class="imageWrapper">
               <img src="./assets/choice-icon.svg" alt="step image" />
             </div>
-            <p class="instructions cc-text">{ Välj ändamål...}</p>
+            <p class="cc-txt instructions">{ Välj ändamål...}</p>
           </div>
           <div>
-            <span class="stepNumber">2.</span>
+            <span class="cc-title stepNumber">2.</span>
 
             <div class="imageWrapper">
               <img src="./assets/charity-icon.svg" alt="step image" />
             </div>
-            <p class="instructions cc-text">{ Skapa insamling...}</p>
+            <p class="cc-txt instructions">{ Skapa insamling...}</p>
           </div>
           <div>
-            <span class="stepNumber">3.</span>
+            <span class="cc-title stepNumber">3.</span>
 
             <div class="imageWrapper">
               <img src="./assets/friends-icon.svg" alt="step image" />
             </div>
-            <p class="instructions cc-text">{ Dela med dina vänner! }</p>
+            <p class="cc-txt instructions">{ Dela med dina vänner! }</p>
           </div>
         </article>
 
-        <button class="btn-primary cc-button">{ Kom igång }</button>
+        <button class="cc-button btn-primary">{ Kom igång }</button>
 
         <hr class="divider" />
       </section>
@@ -166,128 +166,145 @@
         <!-- fundraisers display -->
         <article>
           <div class="input-group">
-            <input type="text" id="searchInput" aria-label="Search" />
+            <input
+              class="cc-input"
+              type="text"
+              id="searchInput"
+              aria-label="Search"
+            />
           </div>
 
           <div class="fundraisersDisplay">
             <div class="fundraiserCard">
-              <img
-                class="fundraiserImage"
-                src="./assets/donor-profile-1.jpg"
-                alt="fundraiser image"
-              />
-              <p class="fundraiserName">{ namn }</p>
-              <p class="description">
+              <div class="imgContainer">
+                <img
+                  class="fundraiserImage"
+                  src="./assets/donor-profile-1.jpg"
+                  alt="fundraiser image"
+                />
+              </div>
+              <p class="cc-title fundraiserName">{ namn }</p>
+              <p class="cc-txt description">
                 { Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Incidunt enim iure sit velit corporis aspernatur, laborum
                 doloremque obcaecati. }
               </p>
               <div class="collectedDisplay">
-                <span class="amount">{amount} kr</span>
-                <span>insamlat</span>
+                <span class="cc-txt amount">{amount} kr</span>
+                <span class="cc-txt">insamlat</span>
               </div>
               <div class="progress-bar">{{ progress bar }}</div>
-              <button class="btn-primary">{ BIDRA }</button>
+              <button class="cc-button btn-primary">{ BIDRA }</button>
             </div>
             <div class="fundraiserCard">
-              <img
-                class="fundraiserImage"
-                src="./assets/donor-profile-1.jpg"
-                alt="fundraiser image"
-              />
-              <p class="fundraiserName">{ namn }</p>
-              <p class="description">
+              <div class="imgContainer">
+                <img
+                  class="fundraiserImage"
+                  src="./assets/donor-profile-1.jpg"
+                  alt="fundraiser image"
+                />
+              </div>
+              <p class="cc-title fundraiserName">{ namn }</p>
+              <p class="cc-txt description">
                 { Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Incidunt enim iure sit velit corporis aspernatur, laborum
                 doloremque obcaecati. }
               </p>
               <div class="collectedDisplay">
-                <span class="amount">{amount} kr</span>
-                <span>insamlat</span>
+                <span class="cc-title amount">{amount} kr</span>
+                <span class="cc-txt">insamlat</span>
               </div>
               <div class="progress-bar">{{ progress bar }}</div>
-              <button class="btn-primary">{ BIDRA }</button>
+              <button class="cc-button btn-primary">{ BIDRA }</button>
             </div>
             <div class="fundraiserCard">
-              <img
-                class="fundraiserImage"
-                src="./assets/donor-profile-1.jpg"
-                alt="fundraiser image"
-              />
-              <p class="fundraiserName">{ namn }</p>
-              <p class="description">
+              <div class="imgContainer">
+                <img
+                  class="fundraiserImage"
+                  src="./assets/donor-profile-1.jpg"
+                  alt="fundraiser image"
+                />
+              </div>
+              <p class="cc-title fundraiserName">{ namn }</p>
+              <p class="cc-txt description">
                 { Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Incidunt enim iure sit velit corporis aspernatur, laborum
                 doloremque obcaecati. }
               </p>
               <div class="collectedDisplay">
-                <span class="amount">{amount} kr</span>
-                <span>insamlat</span>
+                <span class="cc-title amount">{amount} kr</span>
+                <span class="cc-txt">insamlat</span>
               </div>
               <div class="progress-bar">{{ progress bar }}</div>
-              <button class="btn-primary">{ BIDRA }</button>
+              <button class="cc-button btn-primary">{ BIDRA }</button>
             </div>
             <div class="fundraiserCard">
-              <img
-                class="fundraiserImage"
-                src="./assets/donor-profile-1.jpg"
-                alt="fundraiser image"
-              />
-              <p class="fundraiserName">{ namn }</p>
-              <p class="description">
+              <div class="imgContainer">
+                <img
+                  class="fundraiserImage"
+                  src="./assets/donor-profile-1.jpg"
+                  alt="fundraiser image"
+                />
+              </div>
+              <p class="cc-title fundraiserName">{ namn }</p>
+              <p class="cc-txt description">
                 { Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Incidunt enim iure sit velit corporis aspernatur, laborum
                 doloremque obcaecati. }
               </p>
               <div class="collectedDisplay">
-                <span class="amount">{amount} kr</span>
-                <span>insamlat</span>
+                <span class="cc-title amount">{amount} kr</span>
+                <span class="cc-txt">insamlat</span>
               </div>
               <div class="progress-bar">{{ progress bar }}</div>
-              <button class="btn-primary">{ BIDRA }</button>
+              <button class="cc-button btn-primary">{ BIDRA }</button>
             </div>
             <div class="fundraiserCard">
-              <img
-                class="fundraiserImage"
-                src="./assets/donor-profile-1.jpg"
-                alt="fundraiser image"
-              />
-              <p class="fundraiserName">{ namn }</p>
-              <p class="description">
+              <div class="imgContainer">
+                <img
+                  class="fundraiserImage"
+                  src="./assets/donor-profile-1.jpg"
+                  alt="fundraiser image"
+                />
+              </div>
+              <p class="cc-title fundraiserName">{ namn }</p>
+              <p class="cc-txt description">
                 { Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Incidunt enim iure sit velit corporis aspernatur, laborum
                 doloremque obcaecati. }
               </p>
               <div class="collectedDisplay">
-                <span class="amount">{amount} kr</span>
-                <span>insamlat</span>
+                <span class="cc-title amount">{amount} kr</span>
+                <span class="cc-txt">insamlat</span>
               </div>
               <div class="progress-bar">{{ progress bar }}</div>
-              <button class="btn-primary">{ BIDRA }</button>
+              <button class="cc-button btn-primary">{ BIDRA }</button>
             </div>
             <div class="fundraiserCard">
-              <img
-                class="fundraiserImage"
-                src="./assets/donor-profile-1.jpg"
-                alt="fundraiser image"
-              />
-              <p class="fundraiserName">{ namn }</p>
-              <p class="description">
+              <div class="imgContainer">
+                <img
+                  class="fundraiserImage"
+                  src="./assets/donor-profile-1.jpg"
+                  alt="fundraiser image"
+                />
+              </div>
+              <p class="cc-title fundraiserName">{ namn }</p>
+              <p class="cc-txt description">
                 { Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Incidunt enim iure sit velit corporis aspernatur, laborum
                 doloremque obcaecati. }
               </p>
               <div class="collectedDisplay">
-                <span class="amount">{amount} kr</span>
-                <span>insamlat</span>
+                <span class="cc-title amount">{amount} kr</span>
+                <span class="cc-txt">insamlat</span>
               </div>
               <div class="progress-bar">{{ progress bar }}</div>
-              <button class="btn-primary">{ BIDRA }</button>
+              <button class="cc-button btn-primary">{ BIDRA }</button>
             </div>
           </div>
         </article>
 
-        <button class="btn-tertiary cc-button">{ Se fler }</button>
+        <button class="cc-button btn-tertiary">{ Se fler }</button>
       </section>
       <section class="pageContent faqSection" id="faqSection">
         <!-- heading -->
@@ -301,7 +318,7 @@
           error aliquam minima! }
         </p>
         <!-- button -->
-        <button class="btn-secondary cc-button">{ Till FAQ }</button>
+        <button class="cc-button btn-secondary">{ Till FAQ }</button>
       </section>
     </main>
     <footer class="footer">

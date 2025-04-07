@@ -45,7 +45,6 @@
   }
 
   p {
-    font-family: var(--body-font-family);
     line-height: 1.5;
   }
 
@@ -61,10 +60,25 @@
   button:focus-visible {
     outline: 1;
   }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 }
 
-.btn-primary,
-.btn-secondary {
+.cc-title {
+  font-size: 1.5rem;
+  font-family: var(--heading-font-family);
+}
+
+.cc-txt {
+  font-family: var(--body-font-family);
+  line-height: 1.5;
+}
+
+.cc-button {
   padding-inline: 1.8em;
   padding-block: 0.75em;
 
@@ -72,9 +86,7 @@
   border: 0;
 
   font-size: 1.125rem;
-}
 
-.btn-primary {
   background-color: var(--btn-primary-background);
   border: 1px solid var(--btn-primary-border-clr);
   color: var(--btn-primary-txt-clr);
@@ -83,6 +95,14 @@
     background-color: var(--btn-primary-background-hover);
     border-color: var(--btn-primary-border-clr-hover);
   }
+}
+
+.cc-input {
+  /* custom css here */
+}
+
+.imgContainer {
+  width: 100%;
 }
 
 .btn-secondary {
@@ -177,7 +197,7 @@
       max-width: 375px;
       padding-inline: 1.25rem;
       padding-block: 1.5rem;
-      border-radius: 1rem;
+      border-radius: 16px;
 
       box-shadow: var(--card-shadow);
 
@@ -188,13 +208,6 @@
 
       .imgContainer {
         max-height: 250px;
-        width: 100%;
-
-        img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-        }
       }
 
       > .wrapper {
@@ -202,11 +215,6 @@
         flex-direction: column;
         align-items: center;
         gap: 1.25rem;
-
-        .campaignName {
-          font-size: 1.25rem;
-          font-family: var(--heading-font-family);
-        }
 
         .collectedDisplay {
           display: flex;
@@ -219,7 +227,6 @@
           }
 
           .amount {
-            font-size: 1.5rem;
             font-weight: bold;
           }
         }
@@ -245,11 +252,6 @@
 
     h2 {
       grid-area: heading;
-      font-size: 1.25rem;
-
-      @media screen and (width > 740px) {
-        font-size: 1.5rem;
-      }
     }
 
     p {
@@ -265,12 +267,8 @@
     .imgContainer {
       grid-area: image;
       height: 100%;
-      width: 100%;
 
       img {
-        object-fit: cover;
-        width: 100%;
-        height: 100%;
         max-width: 600px;
       }
     }
@@ -338,14 +336,9 @@
     }
   }
 
-  h2 {
-    font-size: 1.25rem;
-  }
-
   @media screen and (width > 740px) {
     h2 {
       align-self: start;
-      font-size: 1.5rem;
     }
 
     .instructionsDisplay {
@@ -441,7 +434,7 @@
 
       @media screen and (width > 740px) {
         .fundraiserCard {
-          width: 375px;
+          width: 350px;
         }
       }
     }
@@ -534,7 +527,6 @@
 
     .adoveoLogo {
       img {
-        width: 100%;
         max-width: 120px;
       }
     }
